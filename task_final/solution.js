@@ -33,7 +33,6 @@
 //    }
 // }
 
-
 function sendRequest(name, phone, address, goods, sum) {
     let data = {client: {}, order: {address, sum}, goods: []};
 
@@ -47,8 +46,7 @@ function sendRequest(name, phone, address, goods, sum) {
     data.order.address = "ул. " + address.street + ", дом " + address.house + ", " + address.entrance + " подъезд, " + address.floor + " этаж, " + "кв " + address.flat;
     data.order.sum = sum;
     
-    
-    let jsonData = JSON.stringify({data});
+        let jsonData = JSON.stringify({data});
 
     return jsonData;
 }
